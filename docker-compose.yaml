@@ -21,7 +21,9 @@ services:
       - ./docker/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
 
   spec:
-    image: phpspec/phpspec
+    build: docker/php
+    entrypoint: vendor/bin/phpspec
+    command: run
     volumes:
       - ./app:/app
 
