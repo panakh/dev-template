@@ -19,3 +19,9 @@ services:
       MYSQL_PASSWORD: test
     volumes:
       - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  spec:
+    image: phpspec/phpspec
+    volumes:
+      - ./app:/app
+
