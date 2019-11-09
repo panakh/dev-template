@@ -1,0 +1,14 @@
+
+###> symfony/framework-bundle ###
+/app/.env.local
+/app/.env.local.php
+/app/.env.*.local
+/app/public/bundles/
+/app/var/
+vendor/
+.idea
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+/app/.web-server-pid
+###< symfony/web-server-bundle ###
