@@ -24,7 +24,12 @@ class Todo
     /**
      * @ORM\Column(type="boolean")
      */
-    private $done;
+    private $done = false;
+
+    public function __construct(string $description)
+    {
+        $this->description = $description;
+    }
 
     public function getId(): ?int
     {
@@ -43,15 +48,20 @@ class Todo
         return $this;
     }
 
-    public function getDone(): ?bool
-    {
-        return $this->done;
-    }
-
     public function setDone(bool $done): self
     {
         $this->done = $done;
 
         return $this;
+    }
+
+    public function markAsDone()
+    {
+        $this->done = true;
+    }
+
+    public function isDone(): bool
+    {
+        return $this->done;
     }
 }
