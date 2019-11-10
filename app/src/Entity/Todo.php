@@ -48,13 +48,6 @@ class Todo
         return $this;
     }
 
-    public function setDone(bool $done): self
-    {
-        $this->done = $done;
-
-        return $this;
-    }
-
     public function markAsDone()
     {
         $this->done = true;
