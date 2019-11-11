@@ -8,5 +8,7 @@ image: php:7.1.29
 pipelines:
   default:
     - step:
+        services:
+          - docker
         script:
           - docker-compose run spec
