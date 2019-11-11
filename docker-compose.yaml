@@ -28,9 +28,9 @@ services:
     command: run
 
   unit:
-    build: docker/php
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
     command: bin/phpunit
-    volumes:
-      - ./app:/app
 
 
