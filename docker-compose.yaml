@@ -27,8 +27,8 @@ services:
     working_dir: /app
 #    entrypoint: vendor/bin/phpspec
     command: ls
-    volumes:
-      - ./app:/app
+#    volumes:
+#      - ./app:/app
 
   unit:
     build: docker/php
