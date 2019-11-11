@@ -15,7 +15,7 @@ pipelines:
           - chmod +x /usr/local/bin/docker-compose
           - docker-compose -v
           - docker-compose run --rm spec
-          - ls
+          - ls docker
           - docker-compose build php mysql
         caches:
           - docker
