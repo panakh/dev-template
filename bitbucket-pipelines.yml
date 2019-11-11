@@ -15,9 +15,6 @@ pipelines:
           - chmod +x /usr/local/bin/docker-compose
           - docker-compose -v
           - docker-compose run --rm spec
+          - docker-compose build php mysql
         caches:
           - docker
-    - step:
-        name: Push docker images
-        script:
-          - docker-compose build php mysql
