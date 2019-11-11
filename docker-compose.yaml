@@ -24,9 +24,8 @@ services:
     build:
       dockerfile: docker/php/Dockerfile
       context: .
-    working_dir: /app
-#    entrypoint: vendor/bin/phpspec
-    command: ls
+    entrypoint: vendor/bin/phpspec
+    command: run
 #    volumes:
 #      - ./app:/app
 
