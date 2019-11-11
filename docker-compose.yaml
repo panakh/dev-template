@@ -34,4 +34,3 @@ services:
       - ./app:/app
 
 
-
