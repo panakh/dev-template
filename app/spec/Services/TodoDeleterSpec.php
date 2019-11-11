@@ -21,7 +21,7 @@ class TodoDeleterSpec extends ObjectBehavior
 
     function it_deletes_a_todo(Todo $todo, EntityManagerInterface $entityManager)
     {
-        $entityManager->remove($todo)->shouldNotBeCalled();
+        $entityManager->remove($todo)->shouldBeCalled();
         $entityManager->flush()->shouldBeCalled();
         $this->deleteTodo($todo);
     }
