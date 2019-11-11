@@ -11,7 +11,7 @@ pipelines:
         services:
           - docker
         script:
-          - apt-get update && apt-get install python3-pip
+          - apt-get update && apt-get install python3-pip -y
           - pip install --no-cache-dir docker-compose
           - docker-compose -v
           - docker-compose run spec
