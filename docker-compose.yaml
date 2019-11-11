@@ -22,6 +22,7 @@ services:
 
   spec:
     build: docker/php
+    context: .
     entrypoint: vendor/bin/phpspec
     command: run
     volumes:
