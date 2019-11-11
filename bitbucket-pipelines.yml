@@ -17,6 +17,6 @@ pipelines:
           - docker-compose run --rm spec
           - ls docker
           - ls docker/php/Dockerfile
-          - docker-compose  build -f docker-compose.yaml php mysql
+          - docker-compose -f docker-compose.yaml  build  php mysql
         caches:
           - docker
