@@ -6,10 +6,4 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 COPY ./app /app
-RUN ls /app
-RUN pwd
-RUN ls
 RUN composer install
-RUN pwd
-RUN ls
-RUN ls vendor
