@@ -17,3 +17,7 @@ pipelines:
           - docker-compose run --rm spec
         caches:
           - docker
+    - step:
+        name: Push docker images
+        script:
+          - docker-compose build php mysql
