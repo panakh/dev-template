@@ -10,3 +10,6 @@ RUN ls /app
 RUN pwd
 RUN ls
 RUN composer install
+RUN pwd
+RUN ls
+RUN ls vendor
