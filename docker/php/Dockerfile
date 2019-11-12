@@ -6,4 +6,5 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 COPY ./app /app
+RUN apt-get update && apt-get install unzip -y
 RUN composer install
