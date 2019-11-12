@@ -19,5 +19,12 @@ pipelines:
           - ls docker/php/Dockerfile
           - docker-compose -f docker-compose.yaml  build  php mysql
           - docker-compose -f docker-compose.yaml  push  php mysql
+          - apt-get update && apt-get install -y jq
+          - curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+          - unzip awscli-bundle.zip
+          - ./awscli-bundle/install -b ~/bin/aws
+          - export PATH=~/bin:$PATH
+          - $(aws ecr get-login --no-include-email --region us-east-1)
+          - docker-compose push php mysql
         caches:
           - docker
