@@ -26,6 +26,9 @@ pipelines:
           - export PATH=~/bin:$PATH
           - aws ecr get-login --no-include-email --region us-west-1
           - $(aws ecr get-login --no-include-email --region us-west-1)
+          - echo $AWS_ACCESS_KEY_ID
+          - echo $AWS_DEFAULT_REGION
+          - echo $AWS_SECRET_ACCESS_KEY
           - docker-compose -f docker-compose.yaml  push  php mysql
         caches:
           - docker
