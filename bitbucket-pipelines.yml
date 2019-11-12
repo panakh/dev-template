@@ -18,7 +18,7 @@ pipelines:
           - ls docker
           - ls docker/php/Dockerfile
           - docker-compose -f docker-compose.yaml  build  php mysql
-          - apt-get update && apt-get install -y jq unzip
+          - apt-get update && apt-get install -y jq unzip python
           - curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
           - unzip awscli-bundle.zip
           - ./awscli-bundle/install -b ~/bin/aws
