@@ -5,6 +5,7 @@ services:
     build:
       dockerfile: docker/php/Dockerfile
       context: .
+    image: 727414602043.dkr.ecr.eu-west-1.amazonaws.com/test
 
   mysql:
     build: docker/mysql
