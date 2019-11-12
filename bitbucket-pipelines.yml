@@ -24,11 +24,7 @@ pipelines:
           - unzip awscli-bundle.zip
           - ./awscli-bundle/install -b ~/bin/aws
           - export PATH=~/bin:$PATH
-          - aws ecr get-login --no-include-email --region us-west-1
-          - $(aws ecr get-login --no-include-email --region us-west-1)
-          - echo $AWS_ACCESS_KEY_ID
-          - echo $AWS_DEFAULT_REGION
-          - echo $AWS_SECRET_ACCESS_KEY
-          - docker push 727414602043.dkr.ecr.eu-west-1.amazonaws.com/php:latest
+          - $(aws ecr get-login --no-include-email --region eu-west-1)
+          - docker-compose -f docker-compose.yaml  push  php mysql
         caches:
           - docker
