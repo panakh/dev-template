@@ -9,7 +9,7 @@ services:
 
   mysql:
     build: docker/mysql
-    image: 727414602043.dkr.ecr.us-east-1.amazonaws.com/mysql
+    image: 727414602043.dkr.ecr.eu-west-1.amazonaws.com/mysql
     ports:
       - 3306:3306
     environment:
