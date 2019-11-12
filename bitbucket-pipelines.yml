@@ -24,7 +24,7 @@ pipelines:
           - unzip awscli-bundle.zip
           - ./awscli-bundle/install -b ~/bin/aws
           - export PATH=~/bin:$PATH
-          - $(aws ecr get-login --no-include-email --region us-east-1)
+          - $(aws ecr get-login --no-include-email --region us-west-1)
           - docker-compose -f docker-compose.yaml  push  php mysql
         caches:
           - docker
