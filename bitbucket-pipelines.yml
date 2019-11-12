@@ -29,6 +29,6 @@ pipelines:
           - echo $AWS_ACCESS_KEY_ID
           - echo $AWS_DEFAULT_REGION
           - echo $AWS_SECRET_ACCESS_KEY
-          - docker-compose -f docker-compose.yaml  push  php mysql
+          - docker push 727414602043.dkr.ecr.eu-west-1.amazonaws.com/php:latest
         caches:
           - docker
